@@ -1,0 +1,5 @@
+param([string]$DB = "appdb_restored")
+$USER = "root"
+$HOST = "127.0.0.1"
+$PASS = "1234"
+mysql -h $HOST -u $USER -p$PASS -e "USE $DB; SELECT 'customers' AS tbl, COUNT(*) AS rows FROM customers UNION ALL SELECT 'orders', COUNT(*) FROM orders;"

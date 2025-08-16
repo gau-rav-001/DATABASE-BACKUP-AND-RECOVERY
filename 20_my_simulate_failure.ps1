@@ -1,0 +1,6 @@
+$DB = "appdb"
+$USER = "root"
+$HOST = "127.0.0.1"
+$PASS = "1234"
+mysql -h $HOST -u $USER -p$PASS -e "USE appdb; DROP TABLE IF EXISTS orders;"
+Write-Output "Simulated failure by dropping table 'orders' in appdb"
